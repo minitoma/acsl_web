@@ -1,0 +1,44 @@
+= Site Web de l'ACSL
+Thomas Calatayud
+
+[blue]*Site Web associatif de type blog*
+
+== Requirements
+
+* python3.6
+* django 1.11.6
+* pillow 4.3.0
+
+== Fonctionnalités
+
+=== Applications
+
+==== News
+
+[NOTE]
+====
+Une news comprend : un titre, son auteur, sa date de création, son contenu
+
+La taille de l'image peut être modifié et a des valeurs par défaut (300*320)
+
+Optionnel : une image, date de publication
+====
+
+
+* Apperçu de toutes les news
+* Possibilité de sélectionner une news et de la voir plus en détail
+* Ajout/modification d'une news via l'interface administrateur
+* La news n'est pas entièrement affichée dans la liste, les 50 premiers mots sont affichés
+
+[WARNING]
+====
+[red]__A revoir :__
+
+* Possibilité de collapse le contenu de la news directement depuis la liste ?
+* Limiter à une seule image par news, pour le moment on peut rajouter autant d'image qu'on veut mais une seule sera affichée
+* Changer l'ordre d'affichage, mettre les news de la plus récente à la plus ancienne
+* Rajouter un système de page avec un nombre limité d'article de page ?  
+ 
+====
+
+==== Album

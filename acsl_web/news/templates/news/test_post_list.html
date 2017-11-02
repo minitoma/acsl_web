@@ -1,0 +1,32 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $(".trun-text").toggle();
+                $("#hide").text("moins");
+            });
+        });
+    </script>    
+	{% for post in posts %}
+	    <div class="post">
+	    	<div class="date">
+                <p>published date: {{ post.published_date }}</p>
+                <p>author: {{ post.author }}</p>
+	    	</div>
+	        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" height="{{ post.image_height }}" width="{{ post.image_width}}"/>
+            {% endif %}
+            {#<div class="trun-text"#}
+    	        <p class="trun-text">{{ post.text|truncatewords:50 }}</p>
+            {#</div>#}
+            <a id="hide" href="#hidden-text" data-toggle="collapse">plus</a>
+            <div id ="hidden-text" class="collapse">
+                {{ post.text }}
+            </div>
+	    </div>
+        <hr />
+	{% endfor %}   
+{% endblock %}

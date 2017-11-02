@@ -4,10 +4,16 @@
 	{% for post in posts %}
 	    <div class="post">
 	    	<div class="date">
-	     	   <p>published: {{ post.published_date }} </p>
+                <p>published date: {{ post.published_date }}</p>
+                <p>author: {{ post.author }}</p>
 	    	</div>
 	        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-	        <p>{{ post.text|linebreaksbr }}</p>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" height="{{ post.image_height }}" width="{{ post.image_width}}"/>
+            {% endif %}
+            <p>{{ post.text|truncatewords:50 }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">plus</a>
 	    </div>
-	{% endfor %}
+        <hr />
+	{% endfor %}   
 {% endblock %}
