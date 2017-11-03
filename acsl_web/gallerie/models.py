@@ -7,6 +7,10 @@ class Photo(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     image = models.ImageField()
+    image_height = models.PositiveIntegerField(
+            default=300,)
+    image_width = models.PositiveIntegerField(
+            default=320,)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(

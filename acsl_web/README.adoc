@@ -41,4 +41,6 @@ Optionnel : une image, date de publication
  
 ====
 
-==== Album
+==== Gallerie
+
+Première ébauche de gallerie contennant des photos rangé par ligne de 5 photos

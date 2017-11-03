@@ -1,0 +1,14 @@
+{% extends 'gallerie/base.html' %}
+
+{% block content %}
+    <table>
+        {% for photo in gallerie reversed %} 
+            {% cycle '<tr>' '' '' '' '' %}
+                <td>
+                    <img src="{{ photo.image.url }}" height="{{ photo.image_height }}" width="{{ photo.image_width }}"/>
+                </td>
+            {% cycle '' '' '' '' '</tr>' %}
+        {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+.page-header {
+    background-color: #202020;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #B6B3B3;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+    line-height: 60%;
+}
+
+.author {
+    color: #960018;
+}
+
+.save {
+    float: right;
+}
+
+.photo-form textarea, .photo-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.photo {
+    margin-bottom: 70px;
+}
+
+.photo h1 a, .photo h1 a:visited {
+    color: #000000;
+}
+
+author {
+    color:#828282;
+    font-style: italic;
+}
+
+
+hr {
+    width:100%;
+}
+
+/*hr {
+	display: block;
+	clear: both;
+	height: 0;
+	margin: 40px 0 80px;
+	padding: 0;
+	border: 0;
+	font-family: arial;
+	text-align: center;
+	font-size: 60px;
+	line-height: 1;
+}
+hr:after {
+	content: "\273D \273D \273D";
+	height: 0;			
+	letter-spacing: 1em;
+	color: #aaa;
+}*/

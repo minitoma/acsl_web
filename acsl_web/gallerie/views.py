@@ -5,7 +5,7 @@ from .models import Photo
 # Create your views here.
 
 def gallerie_list(request):
-    gallerie = Media.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    gallerie = Photo.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'gallerie/gallerie_list.html', {'gallerie': gallerie})
 
 def photo_detail(request, pk):
